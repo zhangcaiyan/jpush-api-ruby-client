@@ -13,7 +13,7 @@ module JPush
       end
 
       def set_android(alert: , title: nil, builder_id: nil,
-        priority: nil, category: nil, style: nil, alert_type: nil, big_text: nil, inbox: nil, big_pic_path: nil, extras: nil)
+        priority: nil, category: nil, style: nil, alert_type: nil, big_text: nil, inbox: nil, big_pic_path: nil, extras: nil, uri_activity: nil)
         @android = {
           alert: alert,
           title: title,
@@ -25,6 +25,7 @@ module JPush
           big_text: big_text,
           inbox: inbox,
           big_pic_path: big_pic_path,
+          uri_activity: uri_activity,
           extras: extras
         }.select { |_, value| !value.nil? }
         self
